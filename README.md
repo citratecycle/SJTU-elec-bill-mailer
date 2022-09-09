@@ -1,6 +1,8 @@
 # SJTU-elec-bill-mailer
 Get the electricity bill of the dormitory bound to your Jaccount from the new API and send an email to you via SMTP accordingly.
 
+从新API获取绑定在Jaccount的宿舍的电费信息，并通过SMTP服务器发送邮件通知。
+
 ## Requirements
 You may need to install packages like aiohttp, bs, Image, ddddocr, and so on. Here's an example:
 ```shell
