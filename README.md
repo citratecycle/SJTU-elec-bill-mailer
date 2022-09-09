@@ -4,9 +4,9 @@ Get the electricity bill of the dormitory bound to your Jaccount from the new AP
 从新API获取绑定在Jaccount的宿舍的电费信息，并通过SMTP服务器发送邮件通知。
 
 ## Requirements
-You may need to install packages like aiohttp, bs, Image, ddddocr, and so on. Here's an example:
+You may need to install packages like aiohttp, bs4, Image, ddddocr, and so on. Here's an example:
 ```shell
-$ pip3 install aiohttp, bs, Image, ddddocr
+$ pip3 install aiohttp, bs4, Image, ddddocr
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ HISTORY_RANGE=
 * `SMTP_HOST` and `SMTP_PORT` (an integer) are the host address and port of your SMTP server, by which you will send an email to notify yourself.
 * `SENDER_ADDR` and `SENDER_PASS` are the email address and password needed to log in to your SMTP server. The email will be sent from `SENDER_ADDR`.
 * `RECEIVER_ADDR` is the email address you wish to receive the notification email.
-* `REPORT_TIME` (an integer) is a 24-hour clock value. If your balance (in kW$\cdot$h) is greater than 10, the script will not send you an email, unless it is executed half an hour near `REPORT_TIME`.
+* `REPORT_TIME` (an integer) is a 24-hour clock value. If your balance (in kW $\cdot$ H) is greater than 10, the script will not send you an email, unless it is executed half an hour near `REPORT_TIME`.
 * `HISTORY_RANGE` (an integer) is the history range the script will access. The script will predict the time (in days) before your balance is used up. It will calculate your average daily usage based on the last `HISTORY_RANGE` days' data.
 
 Then, you can directly run `python3 main.py` to have a try.
